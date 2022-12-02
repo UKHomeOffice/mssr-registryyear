@@ -23,8 +23,9 @@ Basilurtea Export Pvt (Ltd) – {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-8">
-      <h1 class="govuk-heading-l">Basilurtea Export Pvt (Ltd) modern slavery statement summary (2022)</h1>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Basilurtea Export Pvt (Ltd) modern slavery statement summary</h1>
+      <h1 class="govuk-heading-m">for the financial year 1 April 2021 - 31 March 2022</h1>
 
 <!-- Details panel ED START -->
 {% set detailsHtml %}
@@ -66,42 +67,26 @@ Basilurtea Export Pvt (Ltd) – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-8" id="documents">
-  <h2 class="govuk-heading-l">PDF version of the statement</h2>
- <!-- <p class="govuk-body">We asked the organisation whether they wanted to upload a PDF file containing a full version of their modern slavery statement.</p>
-  <h4 class="govuk-heading-s">Organisation’s response</h4>
-  <p class="govuk-body">The organisation uploaded a PDF version of their modern slavery statement, which you can download and view.</p>
-  {{ govukDetails({
-    summaryText: "What are PDF files?",
-    text: "PDF stands for the Portable Document Format, used to display documents in an electronic form independent of the software, hardware or operating system they are viewed on."
-    }) }}-->
-
-  {{ govukWarningText({
-    html: 'The file has been uploaded directly by Basilurtea Export Pvt (Ltd) and has not been reviewed, assessed or moderated by the Home Office for suitability and accessibility. <br/> If you need an accessible version of this PDF file, please contact Basilurtea Export Pvt (Ltd) for further assistance.',
+  <h2 class="govuk-heading-l">PDF version of the statement (optional)</h2>
+<!--{{ govukWarningText({
+    html: 'There is no PDF version of this statement.',
     iconFallbackText: "Warning"
-  }) }}
+  }) }}-->
+<div class="govuk-!-padding-bottom-3">
+  {{govukTag({
+    text: "There is no PDF version of this statement.",
+    classes: "govuk-tag--grey"
+  })}}
+</div>
 
-  <div class="govuk-grid-column-one-quarter govuk-!-margin-bottom-7"><img src="/public/images/doc-thumbnail.png" alt="Thumbnail to represent a document"></div>
-  <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-7">
-
-  <!--File details section start -->
-  <h3 class="govuk-heading-m govuk-!-margin-bottom-1">NameOfTheFileComesHere.pdf</h3>
-  <p class="govuk-body-s">File uploaded:  30 May 2023 at 11:45am <br/> PDF | 450 KB</p>
-  <p class="govuk-body"><a href="#" class="govuk-link">Download file</a><br/><br/><a href="#" class="govuk-link">View file (opens in new window)</a></p>
-  <!-- file details end -->
-  </div>
-  </div>
-
-
-<div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-8">
-<h2 class="govuk-heading-l">About this statement summary</h2>
+<p class="govuk-body">PDF file upload was first introduced for the 2023 registry year.</p>
+<h2 class="govuk-heading-m">About this statement summary</h2>
 <p class="govuk-body">All answers relate to the financial year covered by the statement. The organisation is responsible for all the information it provided. Some of our questions are optional, so organisations may not have answered all of them. The statement summary does not replace the full modern slavery statement – below we provide a link to the full statement on the organisation’s website.</p>
-
 
 <h2 class="govuk-heading-m">Contents</h2>
 <ul class="govuk-list govuk-!-margin-bottom-4">
   <li> -  <a class="govuk-link" href="#scoping">Legal requirement to publish</a>
   <li> -  <a class="govuk-link" href="#statement-period">Statement period and sign-off details</a></li>
-  <!--<li> -  <a class="govuk-link" href="#documents">PDF version of the statement</a></li> -->
   <li> -  <a class="govuk-link" href="#areas-covered">Recommended areas covered by the statement</a></li>
   <li> -  <a class="govuk-link" href="#sectors">The organisation’s sectors and turnover</a></li>
   <li> -  <a class="govuk-link" href="#years">Number of years producing statements</a></li>
@@ -117,15 +102,8 @@ Basilurtea Export Pvt (Ltd) – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-8" id="scoping">
   <h2 class="govuk-heading-l">Legal requirement to publish</h2>
-  <div class="govuk-!-padding-bottom-3">
-    {{govukTag({
-      text: "Published voluntarily",
-      classes: "govuk-tag--grey"
-    })}}
+  <p class="govuk-body">Organisation has confirmed it is legally required for them to publish their statement on their website in 2022
   </div>
-  <p class="govuk-body">Organisation has confirmed it is not legally required for them to publish their statement on their website in 2022.</p>
-  </div>
-
 
 
 <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-8" id="statement-period">
@@ -735,7 +713,7 @@ text: "A social audit is a review of an organisation’s working practices from 
 </div>
 
 <div class="govuk-grid-column-two-thirds  govuk-!-margin-bottom-8"  id="risks">
-<h2 class="govuk-heading-l">modern slavery risks (optional)</h2>
+<h2 class="govuk-heading-l">Modern slavery risks (optional)</h2>
 {{ govukWarningText({
   text: "Identifying modern slavery risks is a vital step towards eradicating it. The government encourages organisations to be as open and transparent as possible, to improve understanding, collaboration and best practice around tackling this worldwide problem.",
   iconFallbackText: "Warning"
@@ -748,6 +726,8 @@ text: "A social audit is a review of an organisation’s working practices from 
     classes: "govuk-tag--grey"
   })}}
 </div>
+
+
 </div>
 
 <div class="govuk-grid-column-two-thirds" id="indicators">
@@ -885,6 +865,7 @@ text: "A social audit is a review of an organisation’s working practices from 
   <h3 class="govuk-heading-m">Actions taken in response to finding ILO indicators</h3>
   <p class="govuk-body">We asked the organisation to tell us whether its statement refers to any actions it took after finding indicators of forced labour</p>
   <h4 class="govuk-heading-s">Organisation’s response</h4>
+
   <div class="govuk-!-padding-bottom-3">
     {{govukTag({
       text: "The organisation told us its statement does not refer to actions it took after finding indicators of forced labour.",

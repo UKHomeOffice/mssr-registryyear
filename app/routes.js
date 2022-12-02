@@ -185,7 +185,7 @@ router.post('/new-user/scoping-journey/S12-1-ScopingQ', function (req, res)
   // YES, company has to subnit the statement
   if (scopingconfirm == "yes"){
     // Send user to next page
-    res.redirect('../../3_FY-1')
+    res.redirect('../../4_before_you_start')
   }
   else {
     // NO, company do not have to subnit the statement

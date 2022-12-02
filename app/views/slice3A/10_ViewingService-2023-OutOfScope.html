@@ -23,8 +23,9 @@ Basilurtea Export Pvt (Ltd) – {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-8">
-      <h1 class="govuk-heading-l">Basilurtea Export Pvt (Ltd) modern slavery statement summary (2022)</h1>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Basilurtea Export Pvt (Ltd) modern slavery statement summary</h1>
+      <h1 class="govuk-heading-m">for the financial year 1 April 2022 - 31 March 2023</h1>
 
 <!-- Details panel ED START -->
 {% set detailsHtml %}
@@ -117,7 +118,13 @@ Basilurtea Export Pvt (Ltd) – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-8" id="scoping">
   <h2 class="govuk-heading-l">Legal requirement to publish</h2>
-  <p class="govuk-body">Organisation has confirmed it is legally required for them to publish their statement on their website in 2022
+  <div class="govuk-!-padding-bottom-3">
+    {{govukTag({
+      text: "Published voluntarily",
+      classes: "govuk-tag--grey"
+    })}}
+  </div>
+  <p class="govuk-body">Organisation has confirmed it is not legally required for them to publish their statement on their website in 2022.</p>
   </div>
 
 

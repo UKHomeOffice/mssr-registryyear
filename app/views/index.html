@@ -15,13 +15,13 @@ Group org submission feature – {{ serviceName }} – GOV.UK Prototype Kit
     <div class="govuk-grid-column-two-thirds">
 
       <span class="govuk-caption-l">Modern slavery statement registry</span>
-<h1 class="govuk-heading-l">Group organisation statement submission feature</h1>
+<h1 class="govuk-heading-l">Updating from Review Year to Financial Year</h1>
 
 <p>Functionalities covered in this prototype:</p>
 <ul class="govuk-list govuk-list--bullet">
-  <li><b>New group statement:</b><br/>User adding a new group organisation statement</li><br/>
-  <li><b>Editing existing group statement:</b><br/>User editing a published group organisation statement. Changing from Group > Single or from Single > Group</li><br/>
-  <li><b>Reusing previous group statement:</b><br/>User using their previous year group statement as a baseline and adding/removing the subsidairies from the list. </li>
+  <li>Removing all references of Review Year in the journey and replacing with Financial year</li><br/>
+ <!--<li><b>Editing existing group statement:</b><br/>User editing a published group organisation statement. Changing from Group > Single or from Single > Group</li><br/>
+  <li><b>Reusing previous group statement:</b><br/>User using their previous year group statement as a baseline and adding/removing the subsidairies from the list. </li>-->
 </ul>
 
       <a href="1_manage_orgs.html" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
@@ -33,35 +33,39 @@ Group org submission feature – {{ serviceName }} – GOV.UK Prototype Kit
 
     </div>
 
-    <div class="govuk-grid-column-one-third">
+   <div class="govuk-grid-column-one-third">
       <aside class="app-related-items" role="complementary">
         <h2 class="govuk-heading-m" id="subsection-title">
           Jump to
         </h2>
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list govuk-!-font-size-16">
-            <li><span class="govuk-caption-m">New submission</span>
-              <p><a href="2_org_page">1st group statement</a><br/>
-              <span class="govuk-body-s">User adding their 1st group statement</span><br/><hr class="govuk-section-break govuk-section-break--visible">
-               </p>
-            </li>
-            <li><span class="govuk-caption-m">Returning user</span>
-              <p><a href="/return-user-adding/2_org_page">2nd group statement</a><br/>
-              <span class="govuk-body-s">User adding their group statement in the following year by using the subsidiaries list from their previous submission</span><br/>
-               </p>
+            <li>
+              <p><a href="slice1/1_manage_orgs">Slice 1</a><br/>
+              <span class="govuk-body-s">Asking financial year dates once they click on the org name within the organsiations page</span><br/>
+              <span class="govuk-body-s">Showing the Financial year information on the organsiations page</span><br/>
+               <hr class="govuk-section-break govuk-section-break--visible"></p>
             </li>
             <li>
-              <p><a href="/return-user/2_org_page">Changing from Group > Single</a><br/>
-              <span class="govuk-body-s">User editing their org type from group to single</span><br/>
-               </p>
+              <p><a href="slice2/1_manage_orgs">Slice 2</a><br/>
+                <span class="govuk-body-s">Showing the email address on the organsiations page to change organisation financial year dates</span><br/>
+                <hr class="govuk-section-break govuk-section-break--visible"></p>
             </li>
             <li>
-              <p><a href="/return-user/2_org_page-SG">Changing from Single > Group</a><br/>
-              <span class="govuk-body-s">User editing their org type from single to group</span><br/><hr class="govuk-section-break govuk-section-break--visible">
+              <p>
+                <a href="slice3/1_manage_orgs">Slice 3</a><br/>
+                <span class="govuk-body-s">Removing the 'Manage your org name' paragraph and the info related to the Review year example</span><br/>
+                <hr class="govuk-section-break govuk-section-break--visible"></p>
+            </li>
+            <li><span class="govuk-caption-m">Slice 3A</span>
+              <p>
+              <a href="/slice3A/10_ViewingService-2023.html">Viewing service page</a><br/>Changes to the viewing service page<br/><br/>
+              <a href="/return-user/2_org_page-SG">Download page</a><br/>Changes to the download page<br/><br/>
+              <hr class="govuk-section-break govuk-section-break--visible">
                </p>
             </li>
 
-            <li><span class="govuk-caption-m">Search scenarios</span>
+          <!--   <li><span class="govuk-caption-m">Search scenarios</span>
               <p><a href="/return-user-adding/6S1-1-group/S11-4-inc-singlePage">Search results - Single page</a><br/>
               <span class="govuk-body-s">Results showing only in one page</span>
                </p>
@@ -117,7 +121,7 @@ Group org submission feature – {{ serviceName }} – GOV.UK Prototype Kit
               <p><a href="/new-user/6S1-1-group/S11-4F-org-address-Error6">Address page errors</a><br/>
               <span class="govuk-body-s">Errors on subsidiary address page.</span>
                </p>
-            </li>
+            </li> -->
           </ul>
         </nav>
       </aside>
