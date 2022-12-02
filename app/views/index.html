@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Group org submission feature – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Modern slavery statement registry</span>
+<h1 class="govuk-heading-l">Group organisation statement submission feature</h1>
+
+<p>Functionalities covered in this prototype:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><b>New group statement:</b><br/>User adding a new group organisation statement</li><br/>
+  <li><b>Editing existing group statement:</b><br/>User editing a published group organisation statement. Changing from Group > Single or from Single > Group</li><br/>
+  <li><b>Reusing previous group statement:</b><br/>User using their previous year group statement as a baseline and adding/removing the subsidairies from the list. </li>
+</ul>
+
+      <a href="1_manage_orgs.html" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        Start now
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+        </svg>
+      </a>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Jump to
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li><span class="govuk-caption-m">New submission</span>
+              <p><a href="2_org_page">1st group statement</a><br/>
+              <span class="govuk-body-s">User adding their 1st group statement</span><br/><hr class="govuk-section-break govuk-section-break--visible">
+               </p>
+            </li>
+            <li><span class="govuk-caption-m">Returning user</span>
+              <p><a href="/return-user-adding/2_org_page">2nd group statement</a><br/>
+              <span class="govuk-body-s">User adding their group statement in the following year by using the subsidiaries list from their previous submission</span><br/>
+               </p>
+            </li>
+            <li>
+              <p><a href="/return-user/2_org_page">Changing from Group > Single</a><br/>
+              <span class="govuk-body-s">User editing their org type from group to single</span><br/>
+               </p>
+            </li>
+            <li>
+              <p><a href="/return-user/2_org_page-SG">Changing from Single > Group</a><br/>
+              <span class="govuk-body-s">User editing their org type from single to group</span><br/><hr class="govuk-section-break govuk-section-break--visible">
+               </p>
+            </li>
+
+            <li><span class="govuk-caption-m">Search scenarios</span>
+              <p><a href="/return-user-adding/6S1-1-group/S11-4-inc-singlePage">Search results - Single page</a><br/>
+              <span class="govuk-body-s">Results showing only in one page</span>
+               </p>
+            </li>
+            <li>
+              <p><a href="/return-user-adding/6S1-1-group/S11-4-inc-multiplePage">Search results - Multiple page</a><br/>
+              <span class="govuk-body-s">Results showing in multiple pages, but user cannot find an organisation they are after</span><br/>
+               </p>
+            </li>
+            <li>
+              <p><a href="/new-user/6S1-1-group/S11-2A-search-error">Search - Error</a><br/>
+              <span class="govuk-body-s">User clicked on the Search button without entering the keyword.</span>
+               </p>
+            </li>
+            <li>
+              <p><a href="/new-user/6S1-1-group/S11-2B-searchResults-none">Search - No results</a><br/>
+              <span class="govuk-body-s">No results has returned based on the entered keyword</span>
+               </p>
+            </li>
+            <li>
+              <p><a href="/new-user/6S1-1-group/S11-2C-searchResults-error">Search results - Error</a><br/>
+              <span class="govuk-body-s">User trying to move to the next step without selecting any of the subsidiary in the table</span><br/><hr class="govuk-section-break govuk-section-break--visible">
+               </p>
+            </li>
+
+            <li><span class="govuk-caption-m">Adding organisations manually</span>
+              <p><a href="/new-user/6S1-1-group/S11-3B-inc-resultsSelected">Journey</a><br/>
+              <span class="govuk-body-s">User couldn't able to find the organisation in the search results so adding one manually.</span>
+               </p>
+            </li>
+
+            <li>
+              <p><a href="/new-user/6S1-1-group/S11-4E-org-detail-Error1">Error 1</a><br/>
+              <span class="govuk-body-s">User clicked on the continue button without entering the Unique number.</span>
+               </p>
+            </li>
+            <li>
+              <p><a href="/new-user/6S1-1-group/S11-4E-org-detail-Error2">Error 2</a> | <a href="/new-user/6S1-1-group/S11-4E-org-detail-Error5">Error 5</a> <br/>
+                <span class="govuk-body-s">User selected a checkbox and clicked on the continue button without entering the Unique number.</span>
+               </p>
+            </li>
+            <li>
+              <p><a href="/new-user/6S1-1-group/S11-4E-org-detail-Error3">Error 3</a> | <a href="/new-user/6S1-1-group/S11-4E-org-detail-Error4">Error 4</a> <br/>
+                <span class="govuk-body-s">User selected "Other" checkbox, entered value in one text field and clicked on the continue button without entering the value in the other text field.</span>
+               </p>
+            </li>
+            <li>
+              <p><a href="/new-user/6S1-1-group/S11-4E-org-detail-Error7">Error 7</a><br/>
+              <span class="govuk-body-s">User clicked on the continue button without entering the subsidiary name.</span>
+               </p>
+            </li>
+            <li>
+              <p><a href="/new-user/6S1-1-group/S11-4F-org-address-Error6">Address page errors</a><br/>
+              <span class="govuk-body-s">Errors on subsidiary address page.</span>
+               </p>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+  </div>
+{% endblock %}
