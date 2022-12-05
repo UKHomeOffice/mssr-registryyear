@@ -57,10 +57,12 @@
 
 <div class="govuk-grid-column-full">
 <!-- Table START -->
+<!-- FOR MYTHING
+  href: "/new-user/scoping-journey/S12-1-ScopingQ"-->
 {% set myThing %}
     {{ govukButton({
         text: "Start",
-        href: "/new-user/scoping-journey/S12-1-ScopingQ"
+        href:"#"
     }) }}
 {% endset %}
 
@@ -98,6 +100,8 @@
     }
 
   ],
+<!--FOR DECLARE STATUS LINK IN FIRST ROW
+  html: '<a href="/new-user/scoping-table/S12-1-ScopingQ">Declare status</a>'-->
 
   rows: [
   [
@@ -108,7 +112,7 @@
         text: "30 Sep 2022"
       },
       {
-        html: '<a href="/new-user/scoping-table/S12-1-ScopingQ">Declare status</a>'
+        html: '<a href="#">Declare status</a>'
       },
       {
         text: "Published on 19 Jul 2022"
