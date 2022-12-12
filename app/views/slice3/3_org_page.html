@@ -74,12 +74,21 @@
     }) }}
 {% endset %}
 
+<!--FOR DECLARE STATUS LINK IN FIRST ROW
+  html: '<a href="/new-user/scoping-table/S12-1-ScopingQ">Declare status</a>'-->
+
+
+
 {{ govukTable({
   captionClasses: "govuk-body",
   firstCellIsHeader: true,
   head: [
     {
       text: "Financial year",
+      classes: 'app-custom-class'
+    },
+    {
+      text: "Statement required by law?",
       classes: 'app-custom-class'
     },
     {
@@ -92,8 +101,6 @@
     }
 
   ],
-<!--FOR DECLARE STATUS LINK IN FIRST ROW
-  html: '<a href="/new-user/scoping-table/S12-1-ScopingQ">Declare status</a>'-->
 
   rows: [
   [
