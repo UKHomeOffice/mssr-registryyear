@@ -7,7 +7,7 @@ module.exports = {
   serviceName: 'Modern slavery statement registry',
 
   // Default port that prototype runs on
-  port: '3000',
+  port: '3001',
 
   // Enable or disable password protection on production
   useAuth: 'true',

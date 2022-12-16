@@ -25,8 +25,7 @@
 {% block content %}
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <span class="govuk-caption-m">Financial year: 01 April 2022 - 31 March 2023</span>
-          <h1 class="govuk-heading-l govuk-!-margin-bottom-4">Subsidiaries you have added</h1>
+          <h1 class="govuk-heading-l govuk-!-margin-bottom-4">Subsidiaries you have added manually</h1>
           <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-5">for < ORG NAME LTD ></p>
 
 <!-- Table START -->
@@ -62,7 +61,7 @@
 }) }}
 <!-- Table END -->
 
-<p class="govuk-body">If you want to 'remove' any of these subsidiaries from the list, then you could be able to do it on the next page.</p>
+<!-- <p class="govuk-body">If you want to 'remove' any of these subsidiaries from the list, then you could be able to do it on the next page.</p>-->
 
 <!--CTA start-->
 {% from "govuk/components/button/macro.njk" import govukButton %}
@@ -73,7 +72,7 @@
   }) }}
 
   {{ govukButton({
-    html: 'Add a new <s>organisations</s> subsidiary',
+    html: 'Add a new subsidiary',
     classes: "govuk-button--secondary",
     href: "S11-4-org-details"
   }) }}

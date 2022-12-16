@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
- Organisation page – {{ serviceName }} – GOV.UK Prototype Kit
+Add your 2022 modern slavery statement to the registry – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 
@@ -27,20 +27,20 @@
         <div class="govuk-grid-column-two-thirds">
           <h1 class="govuk-heading-l govuk-!-margin-bottom-4">Review subsidiaries in your 2022 group statement </h1>
           <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-5">for < ORG NAME LTD ></p>
-          <!-- <p class="govuk-body red">You’ve told us your statement is for the following group of organisations. You can add more organisations to the group, or remove organisations, before confirming and continuing. </p>
+          <!--<p class="govuk-body red">You’ve told us your statement is for the following group of organisations. You can add more organisations to the group, or remove organisations, before confirming and continuing. </p>
           <p class="govuk-body red">If your statement is for a single organisation, and not a group, you can return to the ‘Who is your statement for?’ page and specify a <a href="#">single organisation. </a></p>-->
 
 <!-- Table START -->
 {% set mySecondary %}
     {{ govukButton({
         text: "Include",
-        href: "S11-5-inc-orgsReview",
+        href: "S11-4-orgsReview",
         classes: "govuk-button--secondary"
     }) }}
 {% endset %}
 
 {% set myLink %}
-<p class="govuk-link"> <a href="S11-5A-inc-orgsReview">Remove</a></p>
+<p class="govuk-link"> <a href="S11-4A-orgsReview">Remove</a></p>
 {% endset %}
 <!-- <h1 class="govuk-heading-l govuk-!-margin-bottom-4">25 organisations</h1> -->
 
@@ -49,7 +49,7 @@
   firstCellIsHeader: false,
   head: [
     {
-      html: 'Subsidiary details',
+      text: "Subsidiary details",
       classes: 'app-custom-class'
     },
     {
@@ -65,18 +65,18 @@
   {html:mySecondary}],
   [
   {html: '<strong>SUBS NAME LTD</strong><br/>Suite C Lancaster House Grange Business Park, Enderby Road, Leicester, Leicestershire, LE8 6EP<br/>Company number: 11414209<br/>'},
-  {html:myLink}],
+  {html:mySecondary}],
   [
   {html:'<strong>SUBS NAME LTD</strong><br/>Suite C Lancaster House Grange Business Park, Enderby Road, Leicester, Leicestershire, LE8 6EP<br/>Company number: 08190978<br/>'},
   {html:myLink}],
   [
-  {html: '<strong>SUBS NAME LTD</strong><br/>Suite C Lancaster House Grange Business Park, Enderby Road, Leicester, Leicestershire, LE8 6EP<br/>Company number: 07422241<br/>'},
+  {html:'<strong>SUBS NAME LTD</strong><br/>Suite C Lancaster House Grange Business Park, Enderby Road, Leicester, Leicestershire, LE8 6EP<br/>Company number: 07422241<br/>'},
+  {html:mySecondary}],
+  [
+  {html:'<strong>SUBS NAME LTD</strong><br/>Suite C Lancaster House Grange Business Park, Enderby Road, Leicester, Leicestershire, LE8 6EP<br/>Company number: IP19412R<br/>' },
   {html:myLink}],
   [
-  {html: '<strong>SUBS NAME LTD</strong><br/>Suite C Lancaster House Grange Business Park, Enderby Road, Leicester, Leicestershire, LE8 6EP<br/>Company number: IP19412R<br/>' },
-  {html:myLink }],
-  [
-  {html: '<strong>SUBS NAME LTD</strong><br/>Suite C Lancaster House Grange Business Park, Enderby Road, Leicester, Leicestershire, LE8 6EP<br/>Company number: IP031527<br/>'},
+  {html:'<strong>SUBS NAME LTD</strong><br/>Suite C Lancaster House Grange Business Park, Enderby Road, Leicester, Leicestershire, LE8 6EP<br/>Company number: IP031527<br/>'},
   {html:myLink}]
   ]
 }) }}
@@ -86,12 +86,12 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 <div class="govuk-button-group">
   {{ govukButton({
-    text: "Confirm 5 organisations",
-    href: "../6S1-1-Org/S11-complete"
+    text: "Confirm 3 subsidiaries",
+    href: "../6r_MSSR-complete"
   }) }}
 
   {{ govukButton({
-    text: "Select more organisations",
+    text: "Select more subsidiaries",
     classes: "govuk-button--secondary",
     href: "S11-2-search"
   }) }}
