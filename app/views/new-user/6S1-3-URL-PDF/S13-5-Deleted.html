@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Invalid file size – {{ serviceName }} – GOV.UK Prototype Kit
+FY question – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -19,28 +19,37 @@ Invalid file size – {{ serviceName }} – GOV.UK Prototype Kit
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 <!--Back ends -->
 {% endblock %}
-
-
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-<!-- error summary starts -->
-      {{ govukErrorSummary({
-        titleText: "There is a problem",
-        errorList: [
-          {
-            text: "Invalid file size",
-            href: "#passport-issued-day"
-          }
-        ]
-      }) }}
-<!-- error summary ends -->
 
-<span class="govuk-caption-m">Financial year: 01 April 2022 - 31 March 2023</span>
-      <h1 class="govuk-heading-l govuk-!-margin-bottom-5">Upload PDF version of your statement (optional)</h1>
+      {% set html %}
+        <h3 class="govuk-notification-banner__heading">Your document has been deleted</h3>
+      {% endset %}
+
+      {{ govukNotificationBanner({
+        html: html,
+        type: 'success'
+      }) }}
+
+      <span class="govuk-caption-m">Financial year: 01 April 2021 - 31 March 2022</span>
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-5">Upload PDF version of your statement</h1>
       <p class="govuk-body">You can upload a PDF file of your full modern slavery statement here. It will be available publicly on the statement summary page once your statement is published.</p>
       <p class="govuk-body">The information in the PDF document should be similar to the information on the URL if you have added one.</p>
+
+      {% set detailsHtml %}
+      <p class="govuk-body">You can create a PDF version of your modern slavery statement without buying specialised software.</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Word processors (for example Microsoft Word or LibreOffice Writer) often provide the facility to directly save or export a document to PDF.</li>
+        <li>If your statement is only available on your website, Windows 10/11 and MacOS provide the ability to 'print' directly to PDF.</li>  </ul>
+        <p class="govuk-body">For further help, refer to the documentation for your word processing software / operating system, or contact your organisation's technical support.</p>
+        {% endset %}
+
+      {{ govukDetails({
+        summaryText: "How do I create a PDF version of my modern slavery statement?",
+        html: detailsHtml
+      }) }}
 
       <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
         <li>You can upload only one file in PDF version</li>
@@ -57,9 +66,6 @@ Invalid file size – {{ serviceName }} – GOV.UK Prototype Kit
   name: "file-upload-1",
   label: {
     text: "Upload a file"
-  },
-  errorMessage: {
-    text: "The selected file must be smaller than 20MB"
   }
 }) }}
 <!-- file upload end -->
@@ -70,9 +76,9 @@ Invalid file size – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-button-group">
   {{ govukButton({
     text: "Upload document",
-    href: "/6_S1_2-2-1_MSSR"
+    href: "S13-3-PDFUploaded"
   }) }}
-  <a class="govuk-link" href="/6_S1_2-3_MSSR">Skip this</a>
+  <a class="govuk-link" href="S13-6-FY">Skip this</a>
 </div>
 <!--CTA end-->
 

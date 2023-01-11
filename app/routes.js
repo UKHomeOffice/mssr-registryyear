@@ -122,14 +122,14 @@ router.post('/return-user-adding/3_FY-4', function (req, res)
   }
 })
 
-// PDF document delete check yes and no
-router.post('/new-user/6S1-3-FY-PDF/S13-4-DeleteConfirm', function (req, res)
+// PDF document delete check yes and no [new user]
+router.post('/new-user/6S1-3-URL-PDF/S13-4-DeleteConfirm', function (req, res)
   {
     const selectedOption = req.body['delete-document']
      let error = {}
      if (!selectedOption) {
        error = { text: "Select an option" }
-      return res.render("new-user/6S1-3-FY-PDF/S13-4-DeleteConfirm", { error })}
+      return res.render("new-user/6S1-3-URL-PDF/S13-4-DeleteConfirm", { error })}
 
      // Make a variable and give it the value from 'fy-year'
      var deletedoc = req.session.data['delete-document']
@@ -137,13 +137,39 @@ router.post('/new-user/6S1-3-FY-PDF/S13-4-DeleteConfirm', function (req, res)
      // Check to confirm the deletion
      if (deletedoc == "yes"){
        // Send user to next page
-       res.redirect('/new-user/6S1-3-FY-PDF/S13-5-Deleted')
+       res.redirect('/new-user/6S1-3-URL-PDF/S13-5-Deleted')
      }
      else {
        // Cancelling the deletion
-       res.redirect('/new-user/6S1-3-FY-PDF/S13-3A-PDFUploaded')
+       res.redirect('/new-user/6S1-3-URL-PDF/S13-3A-PDFUploaded')
      }
    })
+
+
+
+// PDF document delete check yes and no [return user]
+router.post('/return-user/6S1-3-URL-PDF/S13-4-DeleteConfirm', function (req, res)
+  {
+    const selectedOption = req.body['delete-document']
+     let error = {}
+     if (!selectedOption) {
+       error = { text: "Select an option" }
+      return res.render("return-user/6S1-3-URL-PDF/S13-4-DeleteConfirm", { error })}
+
+     // Make a variable and give it the value from 'fy-year'
+     var deletedoc = req.session.data['delete-document']
+
+     // Check to confirm the deletion
+     if (deletedoc == "yes"){
+       // Send user to next page
+       res.redirect('/return-user/6S1-3-URL-PDF/S13-5-Deleted')
+     }
+     else {
+       // Cancelling the deletion
+       res.redirect('/return-user/6S1-3-URL-PDF/S13-3A-PDFUploaded')
+     }
+   })
+
 
 
 // SCOPE CHECK - new user [via DECLARE STATUS link in the table]

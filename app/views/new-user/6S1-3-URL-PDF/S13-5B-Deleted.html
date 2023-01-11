@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-FY question – {{ serviceName }} – GOV.UK Prototype Kit
+PDF 2022 upload – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -23,18 +23,8 @@ FY question – {{ serviceName }} – GOV.UK Prototype Kit
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-      {% set html %}
-        <h3 class="govuk-notification-banner__heading">Your document has been deleted</h3>
-      {% endset %}
-
-      {{ govukNotificationBanner({
-        html: html,
-        type: 'success'
-      }) }}
-
-      <span class="govuk-caption-m">Financial year: 01 April 2022 - 31 March 2023</span>
-      <h1 class="govuk-heading-l govuk-!-margin-bottom-5">Upload PDF version of your statement (optional)</h1>
+      <span class="govuk-caption-m">Financial year: 01 April 2021 - 31 March 2022</span>
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-5">Upload PDF version of your statement</h1>
       <p class="govuk-body">You can upload a PDF file of your full modern slavery statement here. It will be available publicly on the statement summary page once your statement is published.</p>
       <p class="govuk-body">The information in the PDF document should be similar to the information on the URL if you have added one.</p>
 
@@ -59,7 +49,6 @@ FY question – {{ serviceName }} – GOV.UK Prototype Kit
         <li>The file should not be printer locked</li>
       </ul>
 
-
 <!--File upload start -->
 {{ govukFileUpload({
   id: "file-upload-1",
@@ -69,7 +58,6 @@ FY question – {{ serviceName }} – GOV.UK Prototype Kit
   }
 }) }}
 <!-- file upload end -->
-
 
 <!--CTA start-->
 {% from "govuk/components/button/macro.njk" import govukButton %}
