@@ -166,7 +166,7 @@ router.post('/return-user/6S1-3-URL-PDF/S13-4-DeleteConfirm', function (req, res
      }
      else {
        // Cancelling the deletion
-       res.redirect('/return-user/6S1-3-URL-PDF/S13-3A-PDFUploaded')
+       res.redirect('/return-user/6S1-3-URL-PDF/S13-3-PDFUploaded')
      }
    })
 
