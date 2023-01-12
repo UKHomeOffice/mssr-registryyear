@@ -280,7 +280,7 @@ router.post('/return-user-adding/scoping-journey/S12-1-ScopingQ', function (req,
   // YES, company has to subnit the statement
   if (ruserAJScopeConfirm == "yes"){
     // Send user to next page
-    res.redirect('/return-user-adding/3_FY-4')
+    res.redirect('/return-user-adding/4_before_you_start')
   }
   else {
     // NO, company do not have to subnit the statement

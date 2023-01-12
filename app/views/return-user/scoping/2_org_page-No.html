@@ -56,34 +56,6 @@
 
 <div class="govuk-grid-column-full">
 <!-- Table START -->
-{% set myThing0 %}
-    {{ govukButton({
-        text: "Start",
-        href: "#"
-    }) }}
-{% endset %}
-
-{% set myThing %}
-    {{ govukButton({
-        text: "Start",
-        href: "/3_FY-1"
-    }) }}
-{% endset %}
-
-{% set myThing1 %}
-    {{ govukButton({
-        text: "Start",
-        href: "../../3_FY-2"
-    }) }}
-{% endset %}
-
-{% set mySecondary %}
-    {{ govukButton({
-        text: "Edit & Republish",
-        href: "/return-user/6r_MSSR",
-        classes: "govuk-button--secondary"
-    }) }}
-{% endset %}
 
 {% set mySecondary2 %}
     {{ govukButton({
@@ -106,7 +78,7 @@
       classes: 'app-custom-class'
     },
     {
-      text: "Do you have to publish a statement on your website by law?",
+      text: "Statement required by law?",
       classes: 'app-custom-class'
     },
     {
@@ -123,10 +95,10 @@
   rows: [
   [
   {
-    text: "2023"
+    text: "1 Apr 2021 - 31 Mar 2022"
   },
   {
-    text: "1 Jul 2022 - 30 Jun 2023"
+    text: "30 Sep 2022"
   },
   {
     html:'No <br/><a href="S12-4-YesDeclare">Change</a>'
@@ -139,17 +111,17 @@
   }
 ],
   [
-      {
-        text: "2022"
-      },
-      {
-        text: "1 Jul 2021 - 30 Jun 2022"
-      },
+  {
+    text: "1 Apr 2020 - 31 Mar 2021"
+  },
+  {
+    text: "30 Sep 2021"
+  },
       {
         html:'Yes <br/><a href="#">Change</a>'
       },
       {
-        text: "Published on 19 Jul 2022"
+        text: "Published on 19 Jul 2021"
       },
       {
         html:mySecondary2
@@ -157,38 +129,21 @@
     ],
     [
     {
-      text: "2021"
+      text: "1 Apr 2019 - 31 Mar 2020"
     },
     {
-      text: "1 Jul 2020 - 30 Jun 2021"
+      text: "30 Sep 2020"
     },
     {
       html:'Yes <br/><a href="#">Change</a>'
     },
     {
-      text: "Published on 24 Jul 2021"
+      text: "Published on 24 Jul 2020"
     },
     {
      html:mySecondary2
     }
-  ],
-    [
-      {
-        text: "2020"
-      },
-      {
-        text: "1 Jul 2019 - 30 Jun 2020"
-      },
-      {
-        html:'Yes <br/><a href="#">Change</a>'
-      },
-      {
-        text: "Published on 8 Aug 2020"
-      },
-      {
-        html:mySecondary2
-       }
-    ]
+  ]
   ]
 }) }}
 <!-- Table END -->
