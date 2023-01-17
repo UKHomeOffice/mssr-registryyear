@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+ Organisation page – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+<!-- Back starts-->
+{% block beforeContent %}
+
+<!-- phase banner starts-->
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<!--phase banner ends-->
+
+ <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+<!--Back ends -->
+
+{% block content %}
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-l govuk-!-margin-bottom-4">Review subsidiaries in your 2022 group statement </h1>
+          <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-5">for < ORG NAME LTD ></p>
+          <!-- <p class="govuk-body red">You’ve told us your statement is for the following group of organisations. You can add more organisations to the group, or remove organisations, before confirming and continuing. </p>
+          <p class="govuk-body red">If your statement is for a single organisation, and not a group, you can return to the ‘Who is your statement for?’ page and specify a <a href="#">single organisation. </a></p>-->
+
+<!-- Table START -->
+{% set mySecondary %}
+    {{ govukButton({
+        text: "Include",
+        href: "S11-5-inc-orgsReview",
+        classes: "govuk-button--secondary"
+    }) }}
+{% endset %}
+
+{% set myLink %}
+<p class="govuk-link"> <a href="S11-5A-inc-orgsReview">Remove</a></p>
+{% endset %}
+<!-- <h1 class="govuk-heading-l govuk-!-margin-bottom-4">25 organisations</h1> -->
+
+{{ govukTable({
+  captionClasses: "govuk-body",
+  firstCellIsHeader: false,
+  head: [
+    {
+      html: 'Subsidiary details',
+      classes: 'app-custom-class'
+    },
+    {
+      text: " ",
+      classes: 'app-custom-class'
+    }
+
+  ],
+
+  rows: [
+  [
+  {html: '<strong>SUBS NAME LTD</strong><br/>Suite C Lancaster House Grange Business Park, Enderby Road, Leicester, Leicestershire, LE8 6EP<br/>Company number: 04750737<br/>'},
+  {html:mySecondary}],
+  [
+  {html: '<strong>SUBS NAME LTD</strong><br/>Suite C Lancaster House Grange Business Park, Enderby Road, Leicester, Leicestershire, LE8 6EP<br/>Company number: 11414209<br/>'},
+  {html:myLink}],
+  [
+  {html:'<strong>SUBS NAME LTD</strong><br/>Suite C Lancaster House Grange Business Park, Enderby Road, Leicester, Leicestershire, LE8 6EP<br/>Company number: 08190978<br/>'},
+  {html:myLink}],
+  [
+  {html: '<strong>SUBS NAME LTD</strong><br/>Suite C Lancaster House Grange Business Park, Enderby Road, Leicester, Leicestershire, LE8 6EP<br/>Company number: 07422241<br/>'},
+  {html:myLink}],
+  [
+  {html: '<strong>SUBS NAME LTD</strong><br/>Suite C Lancaster House Grange Business Park, Enderby Road, Leicester, Leicestershire, LE8 6EP<br/>Company number: IP19412R<br/>' },
+  {html:myLink }],
+  [
+  {html: '<strong>SUBS NAME LTD</strong><br/>Suite C Lancaster House Grange Business Park, Enderby Road, Leicester, Leicestershire, LE8 6EP<br/>Company number: IP031527<br/>'},
+  {html:myLink}]
+  ]
+}) }}
+<!-- Table END -->
+
+<!--CTA start-->
+{% from "govuk/components/button/macro.njk" import govukButton %}
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Confirm 5 organisations",
+    href: "../6S1-1-Org/S11-complete"
+  }) }}
+
+  {{ govukButton({
+    text: "Select more organisations",
+    classes: "govuk-button--secondary",
+    href: "S11-2-search"
+  }) }}
+</div>
+<!--CTA end-->
+
+</div>
+
+  </div>
+
+{% endblock %}

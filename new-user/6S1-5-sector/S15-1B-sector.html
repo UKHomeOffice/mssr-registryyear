@@ -1,0 +1,238 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Add your 2022 modern slavery statement to the registry – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<!-- phase banner starts-->
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<!--phase banner ends-->
+
+<!-- Back starts-->
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<!--Back ends -->
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-m">Financial year: 01 April 2021 - 31 March 2022</span>
+      <h1 class="govuk-heading-l">In which public sectors does your organisation operate in?</h1>
+
+   <!-- checkbox start-->
+   {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+   {% from "govuk/components/input/macro.njk" import govukInput %}
+
+   {% set area1Html %}
+   {{ govukCheckboxes({
+    items: [
+      {
+        value: "carcasses",
+        text: "Armed forces"
+      },
+      {
+        value: "mines",
+        text: "Broadcasting"
+      },
+      {
+        value: "carcasses",
+        text: "Citizens' rights"
+      },
+      {
+        value: "mines",
+        text: "Court services and legal services"
+      },
+      {
+        value: "carcasses",
+        text: "Criminal justice"
+      },
+      {
+        value: "mines",
+        text: "Environment, housing and development"
+      },
+      {
+        value: "carcasses",
+        text: "Health, social care and social security"
+      },
+      {
+        value: "mines",
+        text: "Industry, business, finance etc."
+      },
+      {
+        value: "carcasses",
+        text: "Local government"
+      },
+      {
+        value: "mines",
+        text: "Ministers of the Crown and government departments"
+      },
+      {
+        value: "carcasses",
+        text: "Parliamentary and devolved bodies"
+      },
+      {
+        value: "mines",
+        text: "Police"
+      },
+      {
+        value: "mines",
+        text: "Regulators"
+      },
+      {
+        value: "carcasses",
+        text: "Transport"
+      },
+      {
+        value: "mines",
+        text: "Other educational bodies"
+      },
+
+      {
+        value: "farm",
+        text: "Other"
+      }
+    ]
+  }) }}
+   {% endset -%}
+
+
+
+   {% set area2Html %}
+   {{ govukCheckboxes({
+    items: [
+      {
+        value: "carcasses",
+        text: "Welsh Assembly Government, etc."
+      },
+      {
+        value: "mines",
+        text: "Local government"
+      },
+      {
+        value: "carcasses",
+        text: "National health service"
+      },
+      {
+        value: "mines",
+        text: "Other educational bodies"
+      },
+      {
+        value: "mines",
+        text: "Other public authorities"
+      },
+      {
+        value: "farm",
+        text: "Other"
+      }
+    ]
+  }) }}
+   {% endset -%}
+
+
+   {% set area3Html %}
+   {{ govukCheckboxes({
+    items: [
+      {
+        value: "carcasses",
+        text: "The Northern Irish Ministers"
+      },
+      {
+        value: "mines",
+        text: "Department for Communities"
+      },
+      {
+        value: "carcasses",
+        text: "Department for infrastructure"
+      },
+      {
+        value: "mines",
+        text: "Department for the Economy"
+      },
+      {
+        value: "carcasses",
+        text: "Department of Agriculture, Environment & Rural Affairs"
+      },
+      {
+        value: "mines",
+        text: "Department of Education"
+      },
+      {
+        value: "carcasses",
+        text: "Department of Finance"
+      },
+      {
+        value: "mines",
+        text: "Department of Health"
+      },
+      {
+        value: "carcasses",
+        text: "Department of Justice"
+      },
+      {
+        value: "mines",
+        text: "The Executive Office"
+      },
+      {
+        value: "farm",
+        text: "Other"
+      }
+    ]
+  }) }}
+   {% endset -%}
+
+
+
+   {{ govukCheckboxes({
+     items: [
+       {
+         value: "england",
+         text: "England",
+         conditional: {
+           html: area1Html
+         }
+       },
+       {
+         value: "welsh",
+         text: "Welsh authorities",
+         conditional: {
+           html: area2Html
+         }
+       },
+       {
+        value: "area3",
+        text: "Northern Irish authorities",
+        conditional: {
+          html: area3Html
+        }
+      }
+     ]
+   }) }}
+
+   <!-- checkboxes ends-->
+
+
+<!--CTA start-->
+{% from "govuk/components/button/macro.njk" import govukButton %}
+<div class="govuk-button-group">
+  {{ govukButton(
+    {
+    text: "Save and continue",
+    href: "S15-2-turnover"
+  }
+  ) }}
+  <a class="govuk-link" href="S15-2-turnover">Skip this question</a>
+</div>
+<!--CTA end-->
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
