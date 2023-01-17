@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Transparency and modern slavery – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block beforeContent %}
+<!-- phase banner starts-->
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<!--phase banner ends-->
+
+<!-- Back starts-->
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<!--Back ends -->
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-l">We are changing the way you login to the Modern slavery statement registry.</h1>
+      <p class="govuk-body">From 1 March 2023, you will login to the Modern slavery statement registry using a GOV.UK One Login account, instead of having a separate username and password just for the registry.</p>
+<!-- Button -->
+{{ govukButton({
+  text: "some CTA here",
+  href: "/new-user/6_MSSR"
+}) }}
+<!-- Button Ends-->
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<h2 class="govuk-heading-l">Related information</h1>
+<!-- Accordian start-->
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+{{ govukAccordion({
+  id: "accordion-default",
+  items: [
+    {
+      heading: {
+        text: "Which email address should I use for my GOV.UK One Login account?"
+      },
+      content: {
+        html: "<p class='govuk-body'>We suggest using your work email address for a GOV.UK One Login account to access the Modern slavery statement registry. You may already have a GOV.UK One Login account registered to a personal email address to access other GOV.UK services, however, we advise creating a second account with a work email address to access services on behalf of the organisation you work for. </p>"
+      }
+    },
+    {
+      heading: {
+        text: "Can I still access my registered organisations?"
+      },
+      content: {
+        html: "<p class='govuk-body'>Yes. When you login to the Modern slavery statement registry using your GOV.UK One Login account, we will show you the same organisations which were registered to that email address before we moved to GOV.UK One Login. No further action is required from your side. You are not required to re-register to publish statements for organisations which you previously could.</p>"
+      }
+    },
+    {
+      heading: {
+        text: "Why are you doing this?"
+      },
+      content: {
+        html: "<p class='govuk-body'>Is there any strategy wording we can borrow from the GOV.UK One Login team here? If not, perhaps we could use something like: In order to simplify the way people use services on GOV.UK, there will be a single username and password which you can use to access a wide range of services. Whilst only a few services are currently using the new GOV.UK One Login account, in the future, it should be possible to access Companies House, HMRC, the Modern Slavery Statement Registry and others with the same work-based username and password, simplifying how you interact with us.</p> "
+      }
+    },
+    {
+      heading: {
+        text: "What happens if I've changed the email address I used to login with?"
+      },
+      content: {
+        html: "<p class='govuk-body'><i>Will we be building an admin page to change email addresses? - if so...</i> <br/><br/>If you are unable to create a GOV.UK One Login account with the same email address which you used to sign into the Modern slavery statement registry with, then we will be unable to automatically show the organisations which you used to have access to. In this case, please get in touch by emailing modernslaverystatements@homeoffice.gov.uk with your old and new email addresses, and we will try to assist you.<br/>
+        <i>if not..</i><br/> <br/>If you are unable to create a GOV.UK One Login account with the same email address which you used to sign into the Modern slavery statement registry with, then we will be unable to automatically show the organisations which you used to have access to. In this case, you will need to re-register the organisations you wish to manage. This involves us sending a PIN in the post to the organisations registered address.</p>"
+      }
+    },
+    {
+      heading: {
+        text: "I don't have a two-factor authentication device. What can I do?"
+      },
+      content: {
+        html: "<p class='govuk-body'>Two factor authentication helps to keep your account secure. By sending a text message to a mobile phone number you have access to, or by generating an authentication code through an app, it gives you extra security knowing nobody else is able to access your account should your password ever be compromised. If you do not have access to a work mobile phone, there are also a range of two-factor authentication apps which could be installed on a Windows or Mac device. Two factor authentication is designed to authenticate a person - therefore, we advise using unique, named email addresses rather than a distribution list / mail group email address for your account, and having multiple users listed against your organisation on the Modern slavery statement registry where relevant. By using named accounts rather than generic mailboxes, this should better enable 2FA.</p> "
+      }
+    },
+    {
+      heading: {
+        text: "How will you keep my personal data safe?"
+      },
+      content: {
+        html: "<p class='govuk-body'>(Need a paragraph from GOV.UK One Login here)</p> "
+      }
+    }
+  ]
+}) }}
+
+
+
+<!-- Accordian end-->
+
+
+</div>
+
+  </div>
+
+{% endblock %}
