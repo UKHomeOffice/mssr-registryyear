@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/return-user/scoping/S12-1-StatusQuestion" method="post">
+        {{ govukRadios({
+          idPrefix: "sc-ans",
+          name: "sc-ans",
+          fieldset: {
+            legend: {
+              text: "Tell us about a change to the legal requirement for publishing a 2023 modern slavery statement",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "OrgStatus",
+              text: "Tell us you do need to submit a statement",
+              checked: checked("sc-ans", "status")
+            },
+            {
+              value: "OrgReasons",
+              text: "Change the reasons you don’t need to submit a statement",
+              checked: checked("sc-ans", "reasons")
+            }
+          ],
+          errorMessage: error
+        }) }}
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

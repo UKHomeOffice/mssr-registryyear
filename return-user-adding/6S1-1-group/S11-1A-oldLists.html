@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Add your 2023 modern slavery statement to the registry – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block beforeContent %}
+<!-- phase banner starts-->
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<!--phase banner ends-->
+
+<!-- Back starts-->
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<!--Back ends -->
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-m">Financial year: 01 April 2022 - 31 March 2023</span>
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-5">For your group statement which of these subsidiaries list you would like to use?</h1>
+        <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-5">for < ORG NAME LTD ></p>
+<p class="gov-uk-body">You will be able to add new or remove old subsidiaries from the list.</p>
+
+<!-- Radio button start -->
+<form class="form" action="/return-user-adding/6S1-1-group/S11-1A-oldLists" method="post">
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{{ govukRadios({
+  name: "sign-in",
+  fieldset: {
+    legend: {
+      text: "",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "government-gateway",
+      text: "Financial year: 01 April 2021 - 31 March 2022",
+      hint: {
+      html:'20 subsidiaries <br/>Last updated on 25th August 2021 at 11:20'
+      }
+    },
+    {
+      value: "govuk-verify",
+      text: "Financial year: 01 April 2021 - 31 March 2022",
+      hint:{
+      html: '10 subsidiaries <br/>Last updated on 23rd November 2022 at 13:34'
+      }
+    },
+
+      {
+        value: "govuk-verify",
+        text: "Financial year: 01 April 2020 - 31 March 2021",
+        hint: {
+        html:'20 subsidiaries <br/>Last updated on 23rd November 2022 at 18:00'
+        }
+    }
+  ],
+  errorMessage: error
+}) }}
+</form>
+<!-- Radio button end -->
+
+<!--CTA start-->
+{% from "govuk/components/button/macro.njk" import govukButton %}
+<div class="govuk-button-group">
+  {{ govukButton(
+    {
+    text: "Continue",
+    href: "S11-5-inc-orgsReview"
+  }
+  ) }}
+</div>
+<!--CTA end-->
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

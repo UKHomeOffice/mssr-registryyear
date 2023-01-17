@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Add your 2022 modern slavery statement to the registry – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block beforeContent %}
+<!-- phase banner starts-->
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<!--phase banner ends-->
+
+<!-- Back starts-->
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<!--Back ends -->
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-m">Financial year: 01 April 2021 - 31 March 2022</span>
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-4">Which subsidiaries are included in your group statement?</h1>
+      <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-5">for < ORG NAME LTD ></p>
+
+ <!-- new search start-->
+{{ govukInput({
+  label: {
+    html: 'Search for and select subsidiaries',
+    classes: "govuk-label--s",
+    isPageHeading: true
+  },
+  hint: {
+    html: '<p class="govuk-body">Enter an subsidiary name or company number.</p>'
+  },
+  id: "event-name",
+  name: "event-name"
+}) }}
+<!-- new search ends-->
+
+
+
+<!--CTA start-->
+{% from "govuk/components/button/macro.njk" import govukButton %}
+<div class="govuk-button-group">
+  {{ govukButton(
+    {
+    text: "Search",
+    href: "S11-2-searchResults"
+  }
+  ) }}
+  <a class="govuk-link" href="S11-6-inProgress">Skip this</a>
+</div>
+<!--CTA end-->
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
