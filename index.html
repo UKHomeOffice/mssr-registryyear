@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Registry year – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Modern slavery statement registry</span>
+<h1 class="govuk-heading-l">Updating from Registry year<br/> to Financial Year</h1>
+<p>Functionalities covered in this prototype:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Removing all references of Registry year in the journey and replacing with Financial year</li><br/>
+ <!--<li><b>Editing existing group statement:</b><br/>User editing a published group organisation statement. Changing from Group > Single or from Single > Group</li><br/>
+  <li><b>Reusing previous group statement:</b><br/>User using their previous year group statement as a baseline and adding/removing the subsidairies from the list. </li>-->
+</ul>
+
+    <!-- <a href="1_manage_orgs.html" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        Start now
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+        </svg>
+      </a>-->
+
+    </div>
+
+   <div class="govuk-grid-column-one-third">
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Jump to
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <p><a href="slice1/1_manage_orgs">Slice 1</a><br/>
+              <span class="govuk-body-s">- Asking financial year dates once they click on the org name within the organsiations page</span><br/>
+              <span class="govuk-body-s">- Showing the Financial year information on the organsiations page</span><br/>
+               <hr class="govuk-section-break govuk-section-break--visible"></p>
+            </li>
+           <li>
+              <p><a href="slice2/1_manage_orgs">Slice 2</a><br/>
+                <span class="govuk-body-s">Showing the email address on the organsiations page to change organisation financial year dates</span><br/>
+                <hr class="govuk-section-break govuk-section-break--visible"></p>
+            </li>
+             <li>
+              <p>
+                <a href="slice3/1_manage_orgs">Slice 3</a><br/>
+                <span class="govuk-body-s">Removing the 'Manage your org name' paragraph and the info related to the Registry year example</span><br/>
+                 <span class="govuk-body-s">Replacing "Registry year" column with the Financial Year in the table</span><br/>
+                <hr class="govuk-section-break govuk-section-break--visible"></p>
+            </li>
+            <li><span class="govuk-caption-m">Slice 3A</span>
+              <p>
+              <a href="/slice3A/10_ViewingService-2023.html">Viewing service page</a><br/><span class="govuk-body-s">Removing the Registry year in the headings on this page and replacing it with the Financial year</span><br/><br/>
+              <hr class="govuk-section-break govuk-section-break--visible">
+               </p>
+            </li>
+            <li><span class="govuk-caption-m">Slice 3B</span><p>
+                <a href="/slice3A/11_Downloads.html">Download page</a><br/><span class="govuk-body-s">Changing the format of showing the list, and adding information about the financial year for each data file.</span><br/><br/>
+              <hr class="govuk-section-break govuk-section-break--visible">
+            </li>
+       <!-- <li><span class="govuk-caption-m">Slice 3C</span><p>
+              <a href="/slice3A/11_Downloads.html">Search page</a><br/><span class="govuk-body-s">Updating the filters on the search page so user could select the Financial year end date</span><br/><br/>
+            <hr class="govuk-section-break govuk-section-break--visible">
+          </li> -->
+     <li><span class="govuk-caption-m">Slice 4</span><p>
+          <a href="/2A_org_page">New user journey </a><br/>
+          <a href="/return-user/2_org_page">User editing their statement</a> <br/>
+          <a href="/return-user-adding/2_org_page">User adding their second group statement.</a><br/>
+          <hr class="govuk-section-break govuk-section-break--visible">
+        </li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+  </div>
+{% endblock %}
