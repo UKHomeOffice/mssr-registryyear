@@ -52,14 +52,17 @@
   summaryText: "Change in your financial year?",
   html: 'Please email us your new financial year details to <a href="mailto:modernslaverystatement@homeoffice.gov.uk">modernslaverystatement@homeoffice.gov.uk</a>. '
 }) }}
-    </div>
+</div>
+
 
 <div class="govuk-grid-column-full">
 <!-- Table START -->
+<!-- FOR MYTHING
+  href: "/new-user/scoping-journey/S12-1-ScopingQ"-->
 {% set myThing %}
     {{ govukButton({
         text: "Start",
-        href: "/3_FY-1"
+        href:"#"
     }) }}
 {% endset %}
 
@@ -71,26 +74,24 @@
     }) }}
 {% endset %}
 
+<!--FOR DECLARE STATUS LINK IN FIRST ROW
+  html: '<a href="/new-user/scoping-table/S12-1-ScopingQ">Declare status</a>'-->
 {{ govukTable({
   captionClasses: "govuk-body",
   firstCellIsHeader: true,
   head: [
-  {
-    text: "Financial year",
-    classes: 'app-custom-class'
-  },
-  {
-    text: "Submission deadline",
-    classes: 'app-custom-class'
-  },
-  {
-    text: "Statement required by law?",
-    classes: 'app-custom-class'
-  },
-  {
-    text: "Statement status",
-    classes: 'app-custom-class'
-  },
+    {
+      text: "Financial year",
+      classes: 'app-custom-class'
+    },
+    {
+      text: "Statement required by law?",
+      classes: 'app-custom-class'
+    },
+    {
+      text: "Statement status",
+      classes: 'app-custom-class'
+    },
     {
       text: " ",
       classes: 'app-custom-class'
@@ -99,57 +100,48 @@
   ],
 
   rows: [
+  [
+      {
+        text: "1 Apr 2021 - 31 Mar 2022"
+      },
+      {
+        html: '<a href="#">Declare status</a>'
+      },
+      {
+        text: "Published on 19 Jul 2022"
+      },
+      {
+        html:myThing
+      }
+    ],
     [
     {
-      text: "1 Apr 2021 - 31 Mar 2022"
-    },
-    {
-      text: "30 Sep 2022"
+      text: "1 Apr 2020 - 31 Mar 2021"
     },
     {
       html:'Yes <br/><a href="#">Change</a>'
     },
     {
-      text: "Published on 24 Jul 2022"
+      text: "Published on 24 Jul 2021"
     },
     {
      html:mySecondary2
     }
   ],
     [
-    {
-      text: "1 Apr 2020 - 31 Mar 2021"
-    },
-    {
-      text: "30 Sep 2021"
-    },
+      {
+        text: "1 Apr 2019 - 31 Mar 2020"
+      },
       {
         html:'Yes <br/><a href="#">Change</a>'
       },
       {
-        text: "Published on 8 Aug 2021"
+        text: "Published on 8 Aug 2020"
       },
       {
         html:mySecondary2
        }
-    ],
-    [
-    {
-      text: "1 Apr 2019 - 31 Mar 2020"
-    },
-    {
-      text: "30 Sep 2020"
-    },
-    {
-      html:'Yes <br/><a href="#">Change</a>'
-    },
-    {
-      text: "Published on 24 Jul 2020"
-    },
-    {
-     html:mySecondary2
-    }
-  ]
+    ]
   ]
 }) }}
 <!-- Table END -->
