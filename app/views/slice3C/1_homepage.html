@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+One login journey – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block beforeContent %}
+<!-- phase banner starts-->
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<!--phase banner ends-->
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-xl">See what organisations are doing to tackle modern slavery</h1>
+  <p class="govuk-body-l"> Use the Modern slavery statement registry to find or add statements. See what organisations are doing to eliminate modern slavery from their operations and supply chains.</p>
+<!-- Button start-->
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Find statements",
+      isStartButton: true,
+      href: "2_statement-search"
+    }) }}
+   <p class="govuk-body">or</p>&nbsp;&nbsp;<a class="govuk-link" href="#">Add a statement</a>
+  </div>
+<!-- Button ends-->
+</div>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <h2 class="govuk-heading-l">Find statements</h2>
+    <p>Search for statements using a range of filters. You can also download statement data as CSV files.</p>
+    <p><a href="2_statement-search" class="govuk-link">Search the registry</a></p>
+    <p><a href="../slice3A/11_Downloads.html" class="govuk-link">Download statement data</a></p>
+  </div>
+  <div class="govuk-grid-column-one-half">
+    <h2 class="govuk-heading-l">Add a statement to the registry</h2>
+    <p>To add your organisation’s statement to the registry, you’ll need to create an account. To get started, go to the sign-in page.</p>
+    <p><a href="#" class="govuk-link">Create an account or sign in</a></p>
+  </div>
+</div>
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">Who can add their statement to the registry</h2>
+    <p>Any organisation with a modern slavery statement can add it to the registry, including:</p>
+  <ul class="govuk-list govuk-list--bullet"><li>those that have to publish a statement by law, and want to show they’ve met their legal obligations</li>
+    <li>those that have produced a statement voluntarily</li></ul>
+
+    <!-- Details start-->
+    {% set detailsHtml %}
+    <p class="govuk-body">Under section 54 of the Modern Slavery Act 2015, organisations that meet certain criteria are legally required to publish an annual modern slavery statement in a prominent place on their website. They are also encouraged to make statements from previous years available online.</p>
+    <p class="govuk-body"></p>In addition, organisations are strongly encouraged to publish their statements on the Modern slavery statement registry, as this will be mandatory in the future.</p>
+    <ul class="govuk-list govuk-list--bullet"><li>are a body corporate or a partnership (described as an ‘organisation’ in this service), wherever incorporated</li>
+      <li>carry on a business, or part of a business, in the UK</li>
+      <li>supply goods or services</li>
+      <li>have an annual turnover of £36 million or more</li>
+    </ul>
+    <p>Many other organisations produce a modern slavery statement voluntarily. In the future, the requirement to publish a statement will be extended to public sector organisations with a budget of £36 million or more.</p>
+    {% endset %}
+    {% from "govuk/components/details/macro.njk" import govukDetails %}
+    {{ govukDetails({
+      summaryText: "Who has to publish a statement by law?",
+      html: detailsHtml
+    }) }}
+    <!-- Details end-->
+  </div>  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">Find resources on modern slavery statements</h2>
+    <p>Resources and guidance on modern slavery statements are available on the GOV.UK modern slavery collection page.</p>
+    <p><a href="#">Find resources and guidance</a></p>
+  </div></div>
+
+</div>
+
+{% endblock %}
