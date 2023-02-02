@@ -24,7 +24,7 @@
 
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds  govuk-!-margin-bottom-7">
+    <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">Your organisation name</h1>
 <!-- Details panel ED START -->
 {% set detailsHtml %}
@@ -48,7 +48,7 @@
 
 
 <h2 class="govuk-heading-m">Your financial year</h2>
-<p class="govuk-body">You have informed us that your financial year starts on <span class="govuk-!-font-weight-bold">01 April</span> and ends on <span class="govuk-!-font-weight-bold">31 March</span> every year</p>
+<p class="govuk-body govuk-!-margin-bottom-6">You have informed us that your financial year falls between <span class="govuk-!-font-weight-bold">April</span> and <span class="govuk-!-font-weight-bold">March</span>.</p>
 {{ govukDetails({
   summaryText: "Change in your financial year?",
   html: 'Please email us your new financial year details to <a href="mailto:modernslaverystatement@homeoffice.gov.uk">modernslaverystatement@homeoffice.gov.uk</a>. '

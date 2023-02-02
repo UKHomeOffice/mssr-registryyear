@@ -21,71 +21,72 @@ FY question – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l govuk-!-margin-bottom-5">What are your financial year dates for every year?</h1>
-      <span class="govuk-caption-l govuk-!-margin-bottom-5">Every year on which date and month your financial year start and end</span>
-      <br/>
       <form class="form" action="/#" method="post">
-
-<!-- new FY Start date start -->
-{{ govukDateInput({
-  id: "financial-start-date",
-  namePrefix: "[FStartDate]",
-  fieldset: {
-    legend: {
-      text: "Financial year start date",
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
-  hint: {
-    text: "For example, 27 3"
-  },
-  items: [
-      {
-        name: "day",
-        classes: "govuk-input--width-2",
-        value: data["FStartDate"][0]
-      },
-      {
-        name: "month",
-        classes: "govuk-input--width-2",
-        value: data["FStartDate"][1]
-      }
-    ]
-}) }}
-<!-- new FY Start date end -->
-
-<p>&nbsp;</p>
-<!-- new FY End date start -->
-{{ govukDateInput({
-  id: "financial-end-date",
-  namePrefix: "[FEndDate]",
-  fieldset: {
-    legend: {
-      text: "Financial year-end date",
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
-  hint: {
-    text: "For example, 27 3"
-  },
-  items: [
-      {
-        name: "day",
-        classes: "govuk-input--width-2",
-        value: data["FEndDate"][0]
-      },
-      {
-        name: "month",
-        classes: "govuk-input--width-2",
-        value: data["FEndDate"][1]
-      }
-    ]
-}) }}
-<!-- new FY End date end -->
-
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {{ govukRadios({
+          name: "where-do-you-live",
+          fieldset: {
+            legend: {
+              text: "In which month does your financial year starts?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"}
+            },
+            hint: {
+              text: "We consider that your financial year will end after the 12 month from the month you are going to select on this page."
+            },
+          items: [
+            {
+              value: "january",
+              text: "January"
+            },
+            {
+              value: "february",
+              text: "February"
+            },
+            {
+              value: "march",
+              text: "March"
+            },
+            {
+              value: "april",
+              text: "April"
+            },
+            {
+              value: "may",
+              text: "May"
+            },
+            {
+              value: "june",
+              text: "June"
+            },
+            {
+              value: "july",
+              text: "July"
+            },
+            {
+              value: "august",
+              text: "August"
+            },
+            {
+              value: "september",
+              text: "September"
+            },
+            {
+              value: "october",
+              text: "October"
+            },
+            {
+              value: "november",
+              text: "November"
+            },
+            {
+              value: "december",
+              text: "December"
+            }
+          ]
+        }) }}
 
 
 <!--CTA start-->
@@ -96,8 +97,6 @@ FY question – {{ serviceName }} – GOV.UK Prototype Kit
   }) }}
 </div>
 <!--CTA end-->
-
-
  <!-- <button class="govuk-button" data-module="govuk-button">Continue</button> -->
 
       </form>
