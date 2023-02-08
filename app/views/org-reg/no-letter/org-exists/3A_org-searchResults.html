@@ -1,0 +1,172 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+ Organisation page – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+<!-- Back starts-->
+{% block beforeContent %}
+
+<!-- phase banner starts-->
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<!--phase banner ends-->
+
+ <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+<!--Back ends -->
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-2">150 search results</h1>
+    <p class="govuk-body-l govuk-!-margin-bottom-2">Search term: Siemens energy</p>
+    <p class="govuk-body govuk-!-margin-bottom-9"><a href="../../3_org-search" class="govuk-link">Search again</a></p>
+</div>
+
+<div class="govuk-grid-column-full">
+<!-- Table START -->
+{% set mySecondary %}
+    {{ govukButton({
+        text: "Choose organisation",
+        href: "S11-3-resultsSelected",
+        classes: "govuk-button--secondary"
+    }) }}
+{% endset %}
+
+{% set myLink %}
+<p class="govuk-link"> <a href="#">Choose organisation</a></p>
+{% endset %}
+
+
+{{ govukTable({
+  captionClasses: "govuk-body",
+  firstCellIsHeader: false,
+  head: [
+    { html: 'Organisation name & address',
+      classes: 'app-custom-class'
+    },
+    { text: "References",
+      classes: 'app-custom-class'
+    },
+    { text: "",
+      classes: 'app-custom-class'
+    }
+  ],
+
+  rows: [
+    [{html: '<b>Org name Ltd</b><br/>C A Parsons Works, Shields Road,<br/>Newcastle Upon Tyne, England, NE6 2YL'},
+    { text: "Company no: 08190978"},
+    {html:mySecondary}],
+
+    [{html: '<b>Org name Ltd</b><br/>C A Parsons Works, Shields Road,<br/>Newcastle Upon Tyne, England, NE6 2YL'},
+    { text: "Company no: 08190978"},
+    {html:mySecondary}],
+
+    [{html: '<b>Org name Ltd</b><br/>C A Parsons Works, Shields Road,<br/>Newcastle Upon Tyne, England, NE6 2YL'},
+    { text: "Company no: 08190978"},
+    {html:mySecondary}],
+
+    [{html: '<b>Org name Ltd</b><br/>C A Parsons Works, Shields Road,<br/>Newcastle Upon Tyne, England, NE6 2YL'},
+    { text: "Company no: 08190978"},
+    {html:mySecondary}],
+
+    [{html: '<b>Org name Ltd</b><br/>C A Parsons Works, Shields Road,<br/>Newcastle Upon Tyne, England, NE6 2YL'},
+    { text: "Company no: 08190978"},
+    {html:mySecondary}],
+
+    [{html: '<b>Org name Ltd</b><br/>C A Parsons Works, Shields Road,<br/>Newcastle Upon Tyne, England, NE6 2YL'},
+    { text: "Company no: 08190978"},
+    {html:mySecondary}],
+
+    [{html: '<b>Org name Ltd</b><br/>C A Parsons Works, Shields Road,<br/>Newcastle Upon Tyne, England, NE6 2YL'},
+    { text: "Company no: 08190978"},
+    {html:mySecondary}],
+
+    [{html: '<b>Org name Ltd</b><br/>C A Parsons Works, Shields Road,<br/>Newcastle Upon Tyne, England, NE6 2YL'},
+    { text: "Company no: 08190978"},
+    {html:mySecondary}],
+
+    [{html: '<b>Org name Ltd</b><br/>C A Parsons Works, Shields Road,<br/>Newcastle Upon Tyne, England, NE6 2YL'},
+    { text: "Company no: 08190978"},
+    {html:mySecondary}],
+
+    [{html: '<b>Org name Ltd</b><br/>C A Parsons Works, Shields Road,<br/>Newcastle Upon Tyne, England, NE6 2YL'},
+    { text: "Company no: 08190978"},
+    {html:mySecondary}],
+
+    [{html: '<b>Org name Ltd</b><br/>C A Parsons Works, Shields Road,<br/>Newcastle Upon Tyne, England, NE6 2YL'},
+    { text: "Company no: 08190978"},
+    {html:mySecondary}],
+
+    [{html: '<b>Org name Ltd</b><br/>C A Parsons Works, Shields Road,<br/>Newcastle Upon Tyne, England, NE6 2YL'},
+    { text: "Company no: 08190978"},
+    {html:mySecondary}],
+
+    [{html: '<b>Org name Ltd</b><br/>C A Parsons Works, Shields Road,<br/>Newcastle Upon Tyne, England, NE6 2YL'},
+    { text: "Company no: 08190978"},
+    {html:mySecondary}],
+
+    [{html: '<b>Org name Ltd</b><br/>C A Parsons Works, Shields Road,<br/>Newcastle Upon Tyne, England, NE6 2YL'},
+    { text: "Company no: 08190978"},
+    {html:mySecondary}],
+
+    [{html: '<b>Org name Ltd</b><br/>C A Parsons Works, Shields Road,<br/>Newcastle Upon Tyne, England, NE6 2YL'},
+    { text: "Company no: 08190978"},
+    {html:mySecondary}]
+
+  ]
+}) }}
+<!-- Table END -->
+
+<!--pagination starts-->
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+{{ govukPagination({
+  previous: {
+    href: "#"
+  },
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      current: true,
+      href: "#"
+    },
+    {
+      number: 2,
+      href: "#"
+    },
+    {
+      number: 3,
+      href: "#"
+    }
+  ]
+}) }}
+<!--pagination ends-->
+
+
+<!--CTA start
+{% from "govuk/components/button/macro.njk" import govukButton %}
+<div class="govuk-button-group">
+  {{ govukButton(
+    {
+    text: "Save and Continue",
+    href: "S11-5-inc-orgsReview"
+  }
+  ) }}
+</div>
+CTA end-->
+
+</div>
+
+  </div>
+
+{% endblock %}

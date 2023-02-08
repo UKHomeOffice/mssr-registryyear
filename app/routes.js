@@ -439,4 +439,31 @@ router.post('/return-user-adding/6S1-1-group/S11-1-ListQ', function (req, res)
 })
 
 
+
+// ORG REG - User confirming if they have received a letter or not
+router.post('/org-reg/2_letter', function (req, res)
+{
+  const selectedOption = req.body['letter-check']
+  let error = {}
+  if (!selectedOption) {
+    error = { text: "Select an option" }
+    return res.render("org-reg/2_letter", { error })}
+
+  // Make a variable and give it the value from 'scopingconfirm'
+  var letterConfirm = req.session.data['letter-check']
+
+  // YES, company has to subnit the statement
+  if (letterConfirm == "yes"){
+    // Send user to next page
+    res.redirect('/org-reg/yes-letter/2B_letter-Yes')
+  }
+  else {
+    // NO, company do not have to subnit the statement
+    res.redirect('/org-reg/no-letter/2A_letter-No')
+  }
+})
+
+
+
+
 module.exports = router

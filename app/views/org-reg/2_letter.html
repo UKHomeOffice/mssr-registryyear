@@ -25,6 +25,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/org-reg/2_letter" method="post">
 <!-- Radio button START-->
       {{ govukRadios({
         name: "sign-in",
@@ -47,16 +48,15 @@
             value: "no",
             text: "No"
           }
-        ]
+        ],
+        errorMessage: error
       }) }}
 <!-- Radio button END-->
+<button class="govuk-button" data-module="govuk-button">Continue</a></button>
+      </form>
 
-<!-- CTA START-->
-{{ govukButton({
-  text: "Continue"
-}) }}
-<!-- CTA END-->
-
+      <a class="govuk-link" href="#">Yes journey</a><br/><br/>
+      <a class="govuk-link" href="no-letter/2A_letter-No">No journey</a>
 
     </div>
 

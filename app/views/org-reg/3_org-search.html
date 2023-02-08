@@ -43,7 +43,8 @@
 <!-- CTA START-->
 <div class="govuk-button-group">
   {{ govukButton({
-    text: "Search"
+    text: "Search",
+    href: "no-letter/org-exists/3A_org-searchResults"
   }) }}
 </div>
 <!-- CTA END-->
@@ -52,7 +53,7 @@
 
 <!-- Warning text START -->
 {{ govukWarningText({
-  html: 'If your organisation’s headquarters are outside the UK, it may not appear in the search results. In this case, you’ll need to <a href="#">provide us with its details</a>.',
+  html: 'If your organisation’s headquarters are outside the UK, it may not appear in the search results. In this case, you’ll need to <a href="no-letter/add-manually/4-org-details">provide us with its details</a>.',
   iconFallbackText: "Warning"
 }) }}
 <!-- Warning text END -->
