@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Confirm your organsiation details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block beforeContent %}
+<!-- phase banner starts-->
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<!--phase banner ends-->
+
+<!-- Back starts-->
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<!--Back ends -->
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<!--panel starts-->
+
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
+{{ govukPanel({
+  titleText: "We've got your details",
+  html: 'We\'re sending a PIN by post to the following name and address'
+}) }}
+<!--panel ends-->
+<p></p>
+<p>Joe Gibbins,<br/>
+  AMARAN LIMITED,<br/>
+  4, Frederick Terrace,<br/>
+  Frederick Place,<br/>
+  Brighton,<br/>
+  England,<br/>
+  BN1 1AX</p>
+<h2 class="govuk-heading-m">What happens next</h2>
+<p class="govuk-body">Your PIN should arrive within 7 days.</p>
+<p class="govuk-body">When you get it, sign in to the Modern slavery statement registry and use the PIN to activate the service.</p>
+
+
+<!--CTA start-->
+{% from "govuk/components/button/macro.njk" import govukButton %}
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Add another organisation",
+    classes: "govuk-button--secondary",
+    href: "../../3_org-search"
+  }) }}
+  <a class="govuk-link" href="../../1_list-orgs">Manage organisations</a>
+</div>
+
+</div>
+<!--CTA end-->
+    </div>
+{% endblock %}
