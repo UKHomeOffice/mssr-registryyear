@@ -39,15 +39,15 @@ Confirm your organsiation details – {{ serviceName }} – GOV.UK Prototype Kit
 <p class="govuk-body govuk-!-margin-bottom-8">If there is still no email from us, or for any other help with your registration, contact <a href="mailto:modernslaverystatements@homeoffice.gov.uk">modernslaverystatements@homeoffice.gov.uk</a></p>
 
 
-
 <!--CTA start-->
 {% from "govuk/components/button/macro.njk" import govukButton %}
 <div class="govuk-button-group">
   {{ govukButton({
     text: "Add another organisation",
-    classes: "govuk-button--secondary"
+    classes: "govuk-button--secondary",
+    href: "../../3_org-search"
   }) }}
-  <a class="govuk-link" href="#">Manage organisations</a>
+  <a class="govuk-link" href="../../1_list-orgs">Manage organisations</a>
 </div>
 
 </div>
