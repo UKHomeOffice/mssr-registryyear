@@ -25,10 +25,12 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/org-reg/2_letter" method="post">
-<!-- Radio button START-->
+
+      <!-- Radio button START-->
+      <form class="form" action="/slice6/2_letter" method="post">
       {{ govukRadios({
-        name: "sign-in",
+        idPrefix: "letter-check",
+          name: "letter-check",
         fieldset: {
           legend: {
             text: "Did you receive a letter from us?",
@@ -42,22 +44,20 @@
         items: [
           {
             value: "yes",
-            text: "Yes"
+            text: "Yes",
+            checked: checked("letter-check", "yes")
           },
           {
             value: "no",
-            text: "No"
+            text: "No",
+            checked: checked("letter-check", "no")
           }
         ],
         errorMessage: error
       }) }}
-<!-- Radio button END-->
 <button class="govuk-button" data-module="govuk-button">Continue</a></button>
       </form>
-
-      <a class="govuk-link" href="#">Yes journey</a><br/><br/>
-      <a class="govuk-link" href="no-letter/2A_letter-No">No journey</a>
-
+<!-- Radio button END-->
     </div>
 
   </div>

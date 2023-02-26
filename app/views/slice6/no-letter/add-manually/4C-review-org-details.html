@@ -25,40 +25,44 @@ Confirm your organsiation details – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l govuk-!-margin-bottom-5">Confirm your organisation’s details</h1>
-
-
-<!--Summary table-->
+<p>&nbsp;</p>
+<h3 class="govuk-heading-m">Organisation details</h3>
+<!-- Org details START-->
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 {{ govukSummaryList({
-  card: {
-    title: {
-      text: "Organisation details"
-    },
-    actions: {
-      items: [
-        {
-          href: "4A-org-address",
-          text: "Change",
-          visuallyHiddenText: "Change organisation address"
-        }
-      ]
-    }
-  },
   rows: [
     {
       key: {
         text: "Organisation name"
       },
       value: {
-        html: "Org name"
+        text: "	Org name"
+      },
+      actions: {
+        items: [
+          {
+            href: "4-org-details",
+            text: "Change",
+            visuallyHiddenText: "name"
+          }
+        ]
       }
     },
     {
       key: {
-        text: " < Company > number "
+        text: "< Company > number"
       },
       value: {
-        html: "45673241"
+        text: "45673241"
+      },
+      actions: {
+        items: [
+          {
+            href: "4-org-details",
+            text: "Change",
+            visuallyHiddenText: "date of birth"
+          }
+        ]
       }
     },
     {
@@ -66,33 +70,45 @@ Confirm your organsiation details – {{ serviceName }} – GOV.UK Prototype Kit
         text: "Registered address"
       },
       value: {
-        html: '72 Guild Street, London, SE23 6FH'
+        html: "72 Guild Street, London, SE23 6FH"
+      },
+      actions: {
+        items: [
+          {
+            href: "4A-org-address",
+            text: "Change",
+            visuallyHiddenText: "address"
+          }
+        ]
       }
     }
   ]
 }) }}
+<!--Org details end-->
+<p>&nbsp;</p>
+
+
+<h3 class="govuk-heading-m">Contact details</h3>
+<!-- Contact details START-->
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
 {{ govukSummaryList({
-  card: {
-    title: {
-      text: "Contact details"
-    },
-    actions: {
-      items: [
-        {
-          href: "4B-contact-details",
-          text: "Change",
-          visuallyHiddenText: "Change contact details"
-        }
-      ]
-    }
-  },
   rows: [
     {
       key: {
         text: "Your name"
       },
       value: {
-        html: "Joe Gibbins"
+        text: "Joe Gibbins"
+      },
+      actions: {
+        items: [
+          {
+            href: "4B-contact-details",
+            text: "Change",
+            visuallyHiddenText: "name"
+          }
+        ]
       }
     },
     {
@@ -100,7 +116,16 @@ Confirm your organsiation details – {{ serviceName }} – GOV.UK Prototype Kit
         text: "Email"
       },
       value: {
-        html: "joe.gibbins@gmail.com"
+        text: "joe.gibbins@gmail.com"
+      },
+      actions: {
+        items: [
+          {
+            href: "4B-contact-details",
+            text: "Change",
+            visuallyHiddenText: "date of birth"
+          }
+        ]
       }
     },
     {
@@ -108,12 +133,28 @@ Confirm your organsiation details – {{ serviceName }} – GOV.UK Prototype Kit
         text: "Telephone"
       },
       value: {
-        html: "07985647554"
+        html: "	07985647554"
+      },
+      actions: {
+        items: [
+          {
+            href: "4B-contact-details",
+            text: "Change",
+            visuallyHiddenText: "address"
+          }
+        ]
       }
     }
   ]
 }) }}
-<!-- new summary tables ends-->
+<!--Contact details ENDS-->
+
+
+
+
+
+
+
 
 
 
