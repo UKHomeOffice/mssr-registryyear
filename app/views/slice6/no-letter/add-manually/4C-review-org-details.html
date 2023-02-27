@@ -25,25 +25,30 @@ Confirm your organsiation details – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l govuk-!-margin-bottom-5">Confirm your organisation’s details</h1>
-<p>&nbsp;</p>
-<h3 class="govuk-heading-m">Organisation details</h3>
-<!-- Org details START-->
+<p>&nbsp;</p> 
+
+<!--Organisation details START-->
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 {{ govukSummaryList({
+  card: {
+    title: {
+      text: "Organisation details"
+    }
+  },
   rows: [
     {
       key: {
         text: "Organisation name"
       },
       value: {
-        text: "	Org name"
+        html: "Org name"
       },
       actions: {
         items: [
           {
             href: "4-org-details",
             text: "Change",
-            visuallyHiddenText: "name"
+            visuallyHiddenText: "age"
           }
         ]
       }
@@ -53,14 +58,14 @@ Confirm your organsiation details – {{ serviceName }} – GOV.UK Prototype Kit
         text: "< Company > number"
       },
       value: {
-        text: "45673241"
+        html: "45678541"
       },
       actions: {
         items: [
           {
             href: "4-org-details",
             text: "Change",
-            visuallyHiddenText: "date of birth"
+            visuallyHiddenText: "nationality"
           }
         ]
       }
@@ -77,38 +82,39 @@ Confirm your organsiation details – {{ serviceName }} – GOV.UK Prototype Kit
           {
             href: "4A-org-address",
             text: "Change",
-            visuallyHiddenText: "address"
+            visuallyHiddenText: "working situation"
           }
         ]
       }
     }
   ]
 }) }}
-<!--Org details end-->
-<p>&nbsp;</p>
+<!--Organsiation details END-->
 
 
-<h3 class="govuk-heading-m">Contact details</h3>
 <!-- Contact details START-->
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-
 {{ govukSummaryList({
+  card: {
+    title: {
+      text: "Contact details"
+    },
+    actions: {
+      items: [
+        {
+          href: "4B-contact-details",
+          text: "Change",
+          visuallyHiddenText: "Change contact details"
+        }
+      ]
+    }
+  },
   rows: [
     {
       key: {
-        text: "Your name"
+        text: "Name"
       },
       value: {
-        text: "Joe Gibbins"
-      },
-      actions: {
-        items: [
-          {
-            href: "4B-contact-details",
-            text: "Change",
-            visuallyHiddenText: "name"
-          }
-        ]
+        html: "Joe Gibbins"
       }
     },
     {
@@ -116,16 +122,7 @@ Confirm your organsiation details – {{ serviceName }} – GOV.UK Prototype Kit
         text: "Email"
       },
       value: {
-        text: "joe.gibbins@gmail.com"
-      },
-      actions: {
-        items: [
-          {
-            href: "4B-contact-details",
-            text: "Change",
-            visuallyHiddenText: "date of birth"
-          }
-        ]
+        html: "joegibbins@gmail.com"
       }
     },
     {
@@ -133,29 +130,11 @@ Confirm your organsiation details – {{ serviceName }} – GOV.UK Prototype Kit
         text: "Telephone"
       },
       value: {
-        html: "	07985647554"
-      },
-      actions: {
-        items: [
-          {
-            href: "4B-contact-details",
-            text: "Change",
-            visuallyHiddenText: "address"
-          }
-        ]
+        html: "07985647554"
       }
     }
   ]
 }) }}
-<!--Contact details ENDS-->
-
-
-
-
-
-
-
-
 
 
 
