@@ -30,20 +30,7 @@ Confirm your organsiation details – {{ serviceName }} – GOV.UK Prototype Kit
 <!--Summary table-->
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 {{ govukSummaryList({
-  card: {
-    title: {
-      text: "Organisation details"
-    },
-    actions: {
-      items: [
-        {
-          href: "4A-org-address",
-          text: "Change",
-          visuallyHiddenText: "Change organisation address"
-        }
-      ]
-    }
-  },
+
   rows: [
     {
       key: {
@@ -55,7 +42,7 @@ Confirm your organsiation details – {{ serviceName }} – GOV.UK Prototype Kit
     },
     {
       key: {
-        text: " < Company > number "
+        text: "Company number "
       },
       value: {
         html: "45673241"
