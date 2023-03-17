@@ -29,7 +29,7 @@ Add your 2022 modern slavery statement to the registry – {{ serviceName }} –
    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
    {% from "govuk/components/input/macro.njk" import govukInput %}
 
-   {% set area1Html %}
+   {% set englandHtml %}
    {{ govukCheckboxes({
     items: [
       {
@@ -62,7 +62,7 @@ Add your 2022 modern slavery statement to the registry – {{ serviceName }} –
       },
       {
         value: "mines",
-        text: "Industry, business, finance etc."
+        text: "Industry, business, economy, finance etc."
       },
       {
         value: "carcasses",
@@ -70,11 +70,15 @@ Add your 2022 modern slavery statement to the registry – {{ serviceName }} –
       },
       {
         value: "mines",
-        text: "Ministers of the Crown and government departments"
+        text: "Ministerial departments"
       },
       {
         value: "carcasses",
-        text: "Parliamentary and devolved bodies"
+        text: "Non-Ministerial departments"
+      },
+      {
+        value: "carcasses",
+        text: "Parliamentary"
       },
       {
         value: "mines",
@@ -89,11 +93,6 @@ Add your 2022 modern slavery statement to the registry – {{ serviceName }} –
         text: "Transport"
       },
       {
-        value: "mines",
-        text: "Other educational bodies"
-      },
-
-      {
         value: "farm",
         text: "Other"
       }
@@ -103,31 +102,67 @@ Add your 2022 modern slavery statement to the registry – {{ serviceName }} –
 
 
 
-   {% set area2Html %}
+   {% set welshHtml %}
    {{ govukCheckboxes({
     items: [
       {
         value: "carcasses",
-        text: "Welsh Assembly Government, etc."
+        text: "Broadcasting"
+      },
+      {
+        value: "mines",
+        text: "Citizens' rights"
+      },
+      {
+        value: "carcasses",
+        text: "Court services and legal services"
+      },
+      {
+        value: "mines",
+        text: "Criminal justice"
+      },
+      {
+        value: "farm",
+        text: "Educational bodies"
+      },
+      {
+        value: "mines",
+        text: "Environment, housing and development"
+      },
+      {
+        value: "mines",
+        text: "Health, social care and social security"
+      },
+      {
+        value: "mines",
+        text: "Industry, business, economy, finance etc."
       },
       {
         value: "mines",
         text: "Local government"
       },
       {
-        value: "carcasses",
-        text: "National health service"
+        value: "mines",
+        text: "Non-Ministerial departments"
       },
       {
         value: "mines",
-        text: "Other educational bodies"
+        text: "Police"
       },
       {
         value: "mines",
-        text: "Other public authorities"
+        text: "Regulators"
       },
       {
-        value: "farm",
+        value: "mines",
+        text: "Transport"
+      },
+      {
+        value: "mines",
+        text: "Welsh assembly government departments."
+      },
+      {
+        value: "mines",
         text: "Other"
       }
     ]
@@ -135,53 +170,140 @@ Add your 2022 modern slavery statement to the registry – {{ serviceName }} –
    {% endset -%}
 
 
-   {% set area3Html %}
+   {% set irishHtml %}
    {{ govukCheckboxes({
     items: [
       {
         value: "carcasses",
-        text: "The Northern Irish Ministers"
-      },
-      {
-        value: "mines",
-        text: "Department for Communities"
+        text: "Broadcasting"
       },
       {
         value: "carcasses",
-        text: "Department for infrastructure"
+        text: "Citizens' rights"
       },
       {
         value: "mines",
-        text: "Department for the Economy"
+        text: "Communities"
+      },
+      {
+        value: "mines",
+        text: "Court services and legal services"
       },
       {
         value: "carcasses",
-        text: "Department of Agriculture, Environment & Rural Affairs"
-      },
-      {
-        value: "mines",
-        text: "Department of Education"
+        text: "Criminal justice"
       },
       {
         value: "carcasses",
-        text: "Department of Finance"
+        text: "Educational bodies"
       },
       {
         value: "mines",
-        text: "Department of Health"
+        text: "Environment, housing and development"
+      },
+      {
+        value: "mines",
+        text: "Health, social care and social security"
       },
       {
         value: "carcasses",
-        text: "Department of Justice"
+        text: "Industry, business, economy, finance etc."
+      },
+      {
+        value: "carcasses",
+        text: "Infrastructure"
       },
       {
         value: "mines",
-        text: "The Executive Office"
+        text: "Local government"
       },
       {
         value: "farm",
+        text: "Non-Ministerial departments"
+      },
+      {
+        value: "mines",
+        text: "Police"
+      },
+      {
+        value: "mines",
+        text: "Regulators"
+      },
+      {
+        value: "farm",
+        text: "The Executive Office"
+      },
+      {
+        value: "mines",
+        text: "The Northern Irish government departments"
+      },
+      {
+        value: "mines",
+        text: "Transport"
+      },
+      {
+        value: "mines",
         text: "Other"
       }
+    ]
+  }) }}
+   {% endset -%}
+
+   {% set scottlandHtml %}
+   {{ govukCheckboxes({
+    items: [
+    {
+      value: "farm",
+      text: "Broadcasting"
+    },
+    {
+      value: "mines",
+      text: "Citizens' rights"
+    },
+    {
+      value: "mines",
+      text: "Court services and legal services"
+    },
+    {
+      value: "mines",
+      text: "Criminal justice"
+    },
+    {
+      value: "mines",
+      text: "Environment, housing and development"
+    },
+    {
+      value: "carcasses",
+      text: "Health, social care and social security"
+    },
+    {
+      value: "mines",
+      text: "Industry, business, economy, finance etc."
+    },
+    {
+      value: "mines",
+      text: "Local government"
+    },
+    {
+      value: "farm",
+      text: "Non-Ministerial departments"
+    },
+    {
+      value: "mines",
+      text: "Parliamentary commissioners and ombudsmen"
+    },
+    {
+      value: "mines",
+      text: "Public corporations"
+    },
+    {
+        value: "carcasses",
+        text: "Scottish government departments"
+    },
+    {
+      value: "mines",
+      text: "Tribunals"
+    }
     ]
   }) }}
    {% endset -%}
@@ -194,23 +316,32 @@ Add your 2022 modern slavery statement to the registry – {{ serviceName }} –
          value: "england",
          text: "England",
          conditional: {
-           html: area1Html
+           html: englandHtml
          }
        },
+
        {
-         value: "welsh",
-         text: "Welsh authorities",
-         conditional: {
-           html: area2Html
-         }
-       },
-       {
-        value: "area3",
+        value: "irish",
         text: "Northern Irish authorities",
         conditional: {
-          html: area3Html
+          html: irishHtml
+        }
+      },
+      {
+        value: "scottland",
+        text: "Scottish authorities",
+        conditional: {
+          html: scottlandHtml
+        }
+      },
+      {
+        value: "welsh",
+        text: "Welsh authorities",
+        conditional: {
+          html: welshHtml
         }
       }
+
      ]
    }) }}
 
